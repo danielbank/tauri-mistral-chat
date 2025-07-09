@@ -1,0 +1,128 @@
+---
+alwaysApply: true
+---
+
+---
+
+description:
+globs:
+alwaysApply: true
+
+---
+
+# Overview
+
+- xaac_tauri_lib is a single package with a binary and a library, effectively a workspace-like structure.
+- Utilize Tauri's v2 APIs for native desktop integration (file system access, system tray, etc.).
+
+# Key Principles:
+
+- Write clear, technical responses with precise examples for Tauri v2.
+- Ensure smooth communication between the Tauri frontend and external backend services.
+
+# Communication with Backend:
+
+- Use fetch for HTTP requests from the Tauri frontend to the external backend.
+- Implement proper error handling for network requests and responses.
+- Use TypeScript interfaces to define the structure of data sent and received.
+- Handle potential CORS issues when communicating with the backend.
+
+# Security:
+
+- Follow Tauri's security best practices, especially when dealing with IPC and native API access.
+- Implement proper input validation and sanitization on the frontend.
+- Use HTTPS for all communications with external services.
+- Implement proper authentication and authorization mechanisms if required.
+- Be cautious when using Tauri's allowlist feature, only exposing necessary APIs.
+
+# Performance Optimization:
+
+- Implement proper caching strategies for frequently accessed data.
+- Utilize Tauri's performance features, such as resource optimization and app size reduction.
+
+# Testing:
+
+- Test Tauri-specific features and APIs thoroughly.
+- Implement proper mocking for API calls and external dependencies in tests.
+
+# Build and Deployment:
+
+- Leverage Tauri's built-in updater for seamless application updates.
+- Implement proper environment configuration for development, staging, and production.
+- Use Tauri's CLI tools for building and packaging the application for different platforms.
+
+# Key Conventions:
+
+- Use meaningful and descriptive names for variables, functions, and components.
+- Write clear and concise comments, focusing on why rather than what.
+- Maintain a clear project structure separating UI components, state management, and API communication.
+
+Refer to official documentation for Tauri, React, and TypeScript for best practices and up-to-date APIs.
+
+# Frontend Tech Stack
+
+- Tauri v2.5.1
+- React v18.3.1
+- TypeScript v5.6
+- Tailwind v3.4.1
+- shadcn/ui v0.0.4
+- Vite v6.3.5
+
+# Build and Testing
+
+- Use Vite for fast development and optimized production builds of the React app.
+- Write unit tests for React components using testing libraries like Vitest and React Testing Library.
+
+# Code Style and Structure
+
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., `isLoading`, `hasError`).
+- Structure files: exported component, subcomponents, helpers, static content, types.
+
+# Naming Conventions
+
+- For files and folders, use lowercase with hyphens (e.g. `components/auth-wizard`).
+- Follow React's naming conventions (PascalCase for components, camelCase for variables and functions).
+
+# Imports
+
+- Favor named exports for components.
+- Prefer using import aliases, e.g. `@/lib/consts.ts` instead of relative imports `../lib/consts..`
+- When files are in the same directory, relative imports are acceptable, e.g. `./submodule/index.ts`
+
+# TypeScript Usage
+
+- Use TypeScript for all code; prefer interfaces over types.
+- Avoid enums; use maps instead.
+- Use functional components with TypeScript interfaces.
+
+# Syntax and Formatting
+
+- Use the `function` keyword for pure functions.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX.
+
+# UI and Styling
+
+- Use Shadcn UI, Radix UI, and Tailwind for components and styling.
+- Avoid HTML elements in favor of shadcn/ui components (e.g. `<Button />` instead of `<button />`)
+- Implement responsive design with Tailwind CSS; use a mobile-first approach.
+- Implement proper state management using React context or other state management solutions if needed.
+- Prefer composability instead of Prop Drilling
+
+# Performance Optimization
+
+- Wrap client components in `Suspense` with fallback.
+- Use dynamic loading for non-critical components.
+- Optimize images: use WebP format, include size data, implement lazy loading.
+- Optimize React components for efficient rendering and updates.
+- Use lazy loading for components and routes where appropriate.
+
+# Tauri Frontend Integration (Tauri + React + TypeScript):
+
+- Use React's component-based architecture for modular and reusable UI elements.
+- Leverage TypeScript for strong typing and improved code quality.
+- Implement proper state management using React context or other state management solutions if needed.
+- Follow React's naming conventions (PascalCase for components, camelCase for variables and functions).
