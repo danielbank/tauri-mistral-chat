@@ -12,7 +12,7 @@ alwaysApply: true
 
 # Overview
 
-- xaac_tauri_lib is a single package with a binary and a library, effectively a workspace-like structure.
+- The tauri lib is a single package with a binary and a library, effectively a workspace-like structure.
 - Utilize Tauri's v2 APIs for native desktop integration (file system access, system tray, etc.).
 
 # Key Principles:
